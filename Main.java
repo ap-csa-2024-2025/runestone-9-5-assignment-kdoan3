@@ -7,9 +7,25 @@ public class Main
 {
     public static void main(String[] args)
     {
-        ShoppingCart cart = new ShoppingCart();
-        cart.add(new Item("bread", 3.25));
-        cart.add(new Item("milk", 2.50));
+        Animal a = new Animal ("bob", "bird");
+        Dog d = new dog ("fido", "terrier");
+        Cat c = new Cat("whiskers");
+
+        a.matingCall(); // generic sound
+        d.wagTail(); // waggin
+        System.out.println(c.getnumLives()); // 9
+
+        d.matingCall(); // woof
+        c.matingCall(); // meow
+
+        Animal foo = new Dog("fido", "terrier"); // works cuz dog is an animal
+        foo.matingCall(); // woof
+        foo.wagTail(); // crashes
+
+
+        //ShoppingCart cart = new ShoppingCart();
+        //cart.add(new Item("bread", 3.25));
+        //cart.add(new Item("milk", 2.50));
 
         // Uncomment these to test
         // cart.add(new DiscountedItem("ice cream", 4.50, 1.50));
